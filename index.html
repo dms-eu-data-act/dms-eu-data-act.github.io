@@ -472,6 +472,36 @@
       display: block;
     }
 
+    .faq-list {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .faq-item {
+      padding: 22px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-family: "Georgia", serif;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .info-grid,
@@ -586,6 +616,42 @@ The Data Act fundamentally reshapes the automotive data ecosystem. While Chapter
 <p style="text-align:right;margin-top:10px">
 See: <a  target="_blank" href="https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"> https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained </a>
 </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <h3>Does the EU Data Act apply to DMS (and other SaaS)?</h3>
+            <p>Yes, the EU Data Act applies to DMS (and other SaaS). The Regulation defines these types of platforms as "data processing services," a category that explicitly includes Software as a Service (SaaS), as well as Platform as a Service (PaaS) and Infrastructure as a Service (IaaS). As a SaaS, a Dealer Management System (DMS) is fully subject to the obligations, especially those in Chapter VI of the law, regardless of whether the provider is inside or outside the EU, as long as it offers services to European customers.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do FRAND clauses and cost reductions apply to DMS (and other SaaS)?</h3>
+            <p>Yes, FRAND clauses and cost reductions apply to DMS. Regarding contractual conditions for mandatory data sharing, the regulation requires that terms be fair, reasonable, and non-discriminatory (FRAND). As for costs, the law requires a gradual reduction of switching fees and fully prohibits switching charges as of January 12, 2027. During the current transition period, any charges must be limited strictly to the direct technical costs incurred to facilitate data transfer. However, there is an exception: if the dealership keeps its DMS but connects it to use other services simultaneously (parallel use), the DMS may continue to charge for the costs associated with continuous data extraction (data egress) even after 2027, provided that these charges do not exceed the actual costs incurred, are not profit-generating, and are not prohibitive.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Does the dealership have the right to request that the DMS share the data hosted in the DMS with third parties it designates?</h3>
+            <p>Yes, the dealership has the right to request that the DMS share its hosted data with third parties it designates. The law explicitly establishes the right of customers to switch providers or to use services from different providers at the same time. To enable this, cloud service providers (such as DMS) are required to remove any technical, commercial, contractual, or organizational obstacles that prevent customers from porting their exportable data to another provider or to their own infrastructure. In addition, the contract must require the provider to offer reasonable assistance to the customer and to any third parties authorized by the customer to facilitate access to and transfer of the data.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Does Chapter 6 require Data Processing Services (SaaS) to continuously share data via API (or similar) with a third party, or does it only apply in the context of data migration when switching providers?</h3>
+            <p>Chapter 6 explicitly supports continuous data flow (parallel use), not just data migration when switching providers. The regulation is not limited to a one-time data export at the end of a contract (migration); it explicitly recognizes the customer's right to engage in "parallel use" of multiple data processing services simultaneously. To ensure this right and prevent vendor lock-in, the Data Act requires SaaS and PaaS providers to offer open interfaces (such as APIs) and structured formats that enable interoperability and communication with other services. Both the wording of the regulation and supporting legal analyses conclude that interoperability and data access are continuous and structural obligations throughout the entire lifecycle of the service. Requiring that data can only be exported at contract termination would go against the purpose of the law; therefore, the original provider must allow mechanisms for repeated or continuous access ("data highway") to the third party designated by the customer.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What can a dealership or software vendor do if they are affected?</h3>
+            <p>Start by documenting the specific clauses or fees you believe are non-compliant. You can then file a complaint with your national data authority or the relevant sectoral regulator. Joining a collective effort — such as the discussion on this repository — also helps build a shared evidence base. The Data Act empowers affected parties to seek redress, and regulatory scrutiny increases as more cases are reported.</p>
+          </div>
+
         </div>
       </div>
     </section>
