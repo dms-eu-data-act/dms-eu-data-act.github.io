@@ -310,30 +310,12 @@
 
     .exec-pres-downloads {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 8px;
     }
 
     .exec-lang-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
       white-space: nowrap;
-      min-width: 160px;
-      justify-content: space-between;
-    }
-
-    .exec-lang-btn .lang-label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .exec-lang-btn .download-hint {
-      font-size: 0.78rem;
-      opacity: 0.55;
-      letter-spacing: 0;
-      font-weight: 400;
     }
 
     @media (max-width: 600px) {
@@ -583,25 +565,11 @@ Dealerships across Europe are indirectly bearing fees that DMS providers impose 
           <h2>Executive Presentation</h2>
           <p>A concise overview of DMS Partner Programs and their conflict with the EU Data Act — covering the regulatory context and its implications for dealerships and software providers.</p>
         </div>
-        <div class="panel exec-pres-panel">
-          <div class="exec-pres-downloads">
-            <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-en.pdf" target="_blank" download>
-              <span class="lang-label">🇬🇧 English</span>
-              <span class="download-hint">PDF</span>
-            </a>
-            <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-es.pdf" target="_blank" download>
-              <span class="lang-label">🇪🇸 Español</span>
-              <span class="download-hint">PDF</span>
-            </a>
-            <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-fr.pdf" target="_blank" download>
-              <span class="lang-label">🇫🇷 Français</span>
-              <span class="download-hint">PDF</span>
-            </a>
-            <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-it.pdf" target="_blank" download>
-              <span class="lang-label">🇮🇹 Italiano</span>
-              <span class="download-hint">PDF</span>
-            </a>
-          </div>
+        <div class="exec-pres-downloads">
+          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-en.pdf" target="_blank" download>🇬🇧 English</a>
+          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-es.pdf" target="_blank" download>🇪🇸 Español</a>
+          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-fr.pdf" target="_blank" download>🇫🇷 Français</a>
+          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-it.pdf" target="_blank" download>🇮🇹 Italiano</a>
         </div>
       </div>
     </section>
@@ -655,6 +623,19 @@ See: <a  target="_blank" href="https://digital-strategy.ec.europa.eu/en/factpage
             <p>Start by documenting the specific clauses or fees you believe are non-compliant. You can then file a complaint with your national data authority or the relevant sectoral regulator. Joining a collective effort — such as the discussion on this repository — also helps build a shared evidence base. The Data Act empowers affected parties to seek redress, and regulatory scrutiny increases as more cases are reported.</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <section id="usa-class-action">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Related cases in the USA 🇺🇸: DMS Class Action Lawsuit</h2>
+          <p>The tensions between DMS providers and dealerships are not unique to Europe. In the United States, a class action lawsuit was filed against major DMS providers alleging anti-competitive data access practices — including charges for third-party integrations, restrictive data sharing terms, and lock-in mechanisms that prevent dealers from freely choosing their software vendors. The case offers a useful parallel to the EU Data Act debate, demonstrating that these are systemic industry-wide concerns recognised on both sides of the Atlantic.</p>
+          <ul>
+            <li><a href="https://www.vendordmslitigation.com/" target="_blank" rel="noopener noreferrer">vendordmslitigation.com</a> — information for software vendors affected by the litigation</li>
+            <li><a href="https://www.dealershipclassdmssettlement.com/" target="_blank" rel="noopener noreferrer">dealershipclassdmssettlement.com</a> — information for dealerships regarding the class settlement</li>
+          </ul>
         </div>
       </div>
     </section>
