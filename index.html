@@ -544,8 +544,8 @@ Dealerships across Europe are indirectly bearing fees that DMS providers impose 
 
         <div class="panel video-card">
           <div class="video-frame">
-            <video controls playsinline poster="assets/hero-poster.jpg">
-              <source src="assets/DMS-DataAct-Intro-en.mp4" type="video/mp4" />
+            <video id="heroVideo" controls playsinline poster="assets/hero-poster.jpg">
+              <source id="heroVideoSource" src="assets/DMS-DataAct-Intro-en.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -704,6 +704,17 @@ See: <a  target="_blank" href="https://digital-strategy.ec.europa.eu/en/factpage
   </div>
 
   <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const tl = params.get('_x_tr_tl');
+      const supported = ['es', 'fr', 'it', 'en'];
+      if (tl && supported.includes(tl)) {
+        const source = document.getElementById('heroVideoSource');
+        source.src = 'assets/DMS-DataAct-Intro-' + tl + '.mp4';
+        document.getElementById('heroVideo').load();
+      }
+    })();
+
     const videoSources = {
       es: 'assets/DMS-DataAct-Intro-es.mp4',
       fr: 'assets/DMS-DataAct-Intro-fr.mp4',
