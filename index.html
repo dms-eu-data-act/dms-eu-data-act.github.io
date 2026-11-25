@@ -39,48 +39,6 @@
       margin: 0 auto;
     }
 
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: var(--bg);
-      border-bottom: 2px solid var(--text);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 56px;
-    }
-
-    .brand {
-      font-family: "Georgia", serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      color: var(--text);
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 0.88rem;
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
     .hero {
       padding: 48px 0 32px;
       border-bottom: 1px solid var(--line);
@@ -91,21 +49,6 @@
       grid-template-columns: 1.05fr 1fr;
       gap: 40px;
       align-items: start;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 0;
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      border-bottom: 1px solid var(--line);
     }
 
     h1 {
@@ -126,46 +69,6 @@
       line-height: 1.75;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 9px 18px;
-      border-radius: var(--radius);
-      border: 1px solid var(--text);
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-weight: 500;
-      font-size: 0.88rem;
-      letter-spacing: 0.02em;
-      transition: background 0.15s, color 0.15s;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--text);
-      color: #fff;
-      border-color: var(--text);
-    }
-
-    .btn-primary:hover { background: #333; border-color: #333; }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: var(--line);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover { border-color: var(--text); }
-
     .panel {
       background: var(--surface);
       border: 1px solid var(--line);
@@ -173,38 +76,63 @@
       box-shadow: var(--shadow);
     }
 
-    .video-card {
-      overflow: hidden;
-      padding: 10px;
+    .milestones {
+      padding: 26px 28px;
     }
 
-    .video-frame {
+    .milestones h3 {
+      margin: 0 0 18px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .milestone-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-left: 2px solid var(--line);
+    }
+
+    .milestone-item {
       position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: #e8e6e0;
-      border: 1px solid var(--line);
+      padding: 0 0 20px 20px;
     }
 
-    .video-frame iframe,
-    .video-frame video {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
+    .milestone-item:last-child {
+      padding-bottom: 0;
     }
 
-    .video-placeholder {
+    .milestone-item::before {
+      content: "";
       position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--surface);
+    }
+
+    .milestone-date {
+      display: block;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .milestone-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 0.9rem;
+      line-height: 1.55;
     }
 
     section {
@@ -243,14 +171,12 @@
       background: var(--line);
     }
 
-    .info-card,
-    .pdf-card {
+    .info-card {
       padding: 22px 24px;
       background: var(--surface);
     }
 
-    .info-card h3,
-    .pdf-card h3 {
+    .info-card h3 {
       margin: 0 0 8px;
       font-family: "Georgia", serif;
       font-size: 1rem;
@@ -258,71 +184,88 @@
       letter-spacing: 0;
     }
 
-    .info-card p,
-    .pdf-card p {
+    .info-card p {
       margin: 0;
       color: var(--muted);
       line-height: 1.7;
       font-size: 0.93rem;
     }
 
-    .pdf-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
+    .compare-table-wrap {
       border: 1px solid var(--line);
-      margin-top: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      overflow-x: auto;
     }
 
-    .pdf-meta {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: var(--muted);
+    table.compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      font-size: 0.93rem;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 14px 20px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .compare-table th {
       font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
+      color: var(--text);
     }
 
-    .pdf-actions {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .exec-pres-panel {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-      padding: 28px 32px;
-    }
-
-    .exec-pres-panel p {
-      margin: 0;
+    .compare-table th:first-child,
+    .compare-table td:first-child {
       color: var(--muted);
-      line-height: 1.75;
-      font-size: 0.97rem;
-    }
-
-    .exec-pres-downloads {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .exec-lang-btn {
+      font-weight: 600;
+      width: 22%;
       white-space: nowrap;
     }
 
+    .compare-table thead th:nth-child(2) {
+      background: #f1ece2;
+    }
+
+    .compare-table thead th:nth-child(3) {
+      background: var(--primary-soft);
+    }
+
+    .compare-table tbody td:nth-child(3) {
+      background: rgba(42, 61, 94, 0.04);
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .clause-item blockquote {
+      margin: 0;
+      padding: 10px 16px;
+      border-left: 3px solid var(--primary);
+      background: var(--primary-soft);
+      font-family: "Georgia", serif;
+      font-style: italic;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .clause-item p {
+      margin: 10px 0 0;
+    }
+
     @media (max-width: 600px) {
-      .exec-pres-panel {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
+      .compare-table th,
+      .compare-table td {
+        padding: 12px 14px;
       }
     }
 
@@ -332,126 +275,6 @@
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 0.82rem;
       border-top: 2px solid var(--text);
-    }
-
-    .note {
-      margin-top: 12px;
-      padding: 10px 14px;
-      border-radius: var(--radius);
-      background: #eeecea;
-      border-left: 3px solid var(--line);
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
-
-    .lang-btns {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .btn-lang {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 5px 11px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: border-color 0.15s, color 0.15s;
-    }
-
-    .btn-lang:hover {
-      border-color: var(--text);
-      color: var(--text);
-    }
-
-    /* Modal */
-    .modal-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(20, 20, 18, 0.65);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .modal-backdrop.open {
-      display: flex;
-    }
-
-    .modal {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-      width: min(100%, 760px);
-      overflow: hidden;
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .modal-title {
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-weight: 600;
-      font-size: 0.88rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .modal-close {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: transparent;
-      cursor: pointer;
-      color: var(--muted);
-      font-size: 1rem;
-      transition: border-color 0.15s, color 0.15s;
-    }
-
-    .modal-close:hover {
-      border-color: var(--text);
-      color: var(--text);
-    }
-
-    .modal-body {
-      padding: 10px;
-    }
-
-    .modal-video-frame {
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: #111;
-    }
-
-    .modal-video-frame video {
-      width: 100%;
-      height: 100%;
-      display: block;
     }
 
     .faq-list {
@@ -486,38 +309,15 @@
 
     @media (max-width: 980px) {
       .hero-grid,
-      .info-grid,
-      .pdf-grid {
+      .info-grid {
         grid-template-columns: 1fr;
       }
 
       h1 { max-width: 14ch; }
     }
-
-    @media (max-width: 720px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-    }
   </style>
 </head>
 <body>
-  <!--
-    Replace these paths when you have the final files:
-    VIDEO_URL = https://www.youtube.com/embed/VIDEO_ID
-    PDF_1 = partner-programs-vs-data-act.pdf
-    PDF_2 = interoperabilidad-data-act.pdf
-    PDF_3 = carta-tipo-concesionarios.pdf
-  -->
-
   <main id="top">
     <section class="hero">
       <div class="wrap hero-grid">
@@ -529,35 +329,87 @@ Dealerships across Europe are indirectly bearing the cost of fees that DMS provi
           </p>
         </div>
 
-        <div class="panel video-card">
-          <div class="video-frame">
-            <video id="heroVideo" controls playsinline poster="assets/hero-poster.jpg">
-              <source id="heroVideoSource" src="assets/DMS-DataAct-Intro-en.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+        <div class="panel milestones">
+          <h3>Key dates</h3>
+          <ul class="milestone-list">
+            <li class="milestone-item">
+              <span class="milestone-date">January 2024</span>
+              <p>The EU Data Act enters into force.</p>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-date">September 12, 2025</span>
+              <p>Chapter VI becomes applicable — data-processing services such as DMS platforms are bound by its interoperability and FRAND obligations.</p>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-date">January 12, 2027</span>
+              <p>Switching charges for changing or combining cloud/SaaS providers are fully prohibited.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="rights">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What the Data Act guarantees dealerships</h2>
+          <p>Chapter VI of the Regulation sets out a baseline of rights for any customer of a data processing service, including a dealership using a DMS.</p>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Unrestricted access</h3>
+            <p>The right to access the business data your dealership generates, easily, securely, comprehensively, and by default.</p>
           </div>
-          <div class="lang-btns">
-            <span style="font-size:0.88rem;color:var(--muted);font-weight:600;align-self:center;">Other:</span>
-            <button class="btn-lang" onclick="openVideoModal('es', 'Spanish')">🇪🇸 Spanish</button>
-            <button class="btn-lang" onclick="openVideoModal('fr', 'French')">🇫🇷 French</button>
-            <button class="btn-lang" onclick="openVideoModal('it', 'Italian')">🇮🇹 Italian</button>
-            <button class="btn-lang" onclick="openVideoModal('en', 'English')">🇺🇸English</button>
+          <div class="info-card">
+            <h3>Freedom to share</h3>
+            <p>The right to direct the DMS to share that data with a third-party application of your choice — a CRM, an inventory manager, an AI tool, or any other service.</p>
+          </div>
+          <div class="info-card">
+            <h3>FRAND conditions</h3>
+            <p>Any conditions attached to that data sharing — including any charges — must be Fair, Reasonable, and Non-Discriminatory.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="executive-presentation">
+    <section id="comparison">
       <div class="wrap">
         <div class="section-head">
-          <h2>Executive Presentation</h2>
-          <p>A concise overview of DMS Partner Programs and their conflict with the EU Data Act — covering the regulatory context and its implications for dealerships and software providers.</p>
+          <h2>How this compares with current partner-program practice</h2>
+          <p>Several terms commonly found in DMS partner programs today sit in tension with these obligations:</p>
         </div>
-        <div class="exec-pres-downloads">
-          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-en.pdf" target="_blank" download>🇬🇧 English</a>
-          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-es.pdf" target="_blank" download>🇪🇸 Español</a>
-          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-fr.pdf" target="_blank" download>🇫🇷 Français</a>
-          <a class="btn btn-secondary exec-lang-btn" href="assets/executive-presentation-it.pdf" target="_blank" download>🇮🇹 Italiano</a>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Common current practice</th>
+                <th scope="col">Data Act requirement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Data ownership</th>
+                <td>DMS treated in practice as the holder of the dealership's data.</td>
+                <td>The dealership retains legal control over data it generates.</td>
+              </tr>
+              <tr>
+                <th scope="row">Access costs</th>
+                <td>Revenue-share fees (commonly 20–30%) and recurring access charges levied on third-party vendors.</td>
+                <td>Access is free for the customer; any charge to a third party must be a direct, FRAND-compliant cost-recovery mechanism.</td>
+              </tr>
+              <tr>
+                <th scope="row">Integration rights</th>
+                <td>The DMS provider decides which third-party tools may connect.</td>
+                <td>The dealership determines which third-party tools connect; the provider cannot block a compliant request.</td>
+              </tr>
+              <tr>
+                <th scope="row">Parallel use</th>
+                <td>Technical and contractual barriers discourage running third-party tools alongside the DMS.</td>
+                <td>Mandatory, continuous interoperability supporting parallel use of multiple services.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -575,6 +427,32 @@ The Data Act fundamentally reshapes the automotive data ecosystem. While Chapter
 <p style="text-align:right;margin-top:10px">
 See: <a  target="_blank" href="https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"> https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained </a>
 </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clause-examples">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Examples of clauses under scrutiny</h2>
+          <p>The following anonymized excerpts are drawn from current DMS partner agreements and illustrate the type of terms being assessed against the Data Act's FRAND requirements.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item clause-item">
+            <h3>A European DMS provider</h3>
+            <blockquote>"…a recurring charge equal to the greater of 20% or 30% of the Partner's customer net revenue…"</blockquote>
+            <p>Imposed on third-party vendors that benefit from the data integration.</p>
+          </div>
+          <div class="faq-item clause-item">
+            <h3>An Italian DMS provider</h3>
+            <blockquote>"…[X] Euro/month for the stock data flow per customer site, plus [X] Euro for each additional data flow…"</blockquote>
+            <p>A volume-based fee structure applied per connected dealership site.</p>
+          </div>
+          <div class="faq-item clause-item">
+            <h3>A Spanish DMS provider</h3>
+            <blockquote>"…the reproduction, transformation, distribution… or any unauthorized use…" [is prohibited]</blockquote>
+            <p>A broad non-compete and audit clause restricting use of the integration framework.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -672,71 +550,6 @@ See: <a  target="_blank" href="https://digital-strategy.ec.europa.eu/en/factpage
     </section>
 
   </main>
-
-  <!-- Video Language Modal -->
-  <div class="modal-backdrop" id="videoModal" onclick="handleBackdropClick(event)">
-    <div class="modal">
-      <div class="modal-header">
-        <span class="modal-title" id="modalTitle"></span>
-        <button class="modal-close" onclick="closeVideoModal()" aria-label="Close">✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="modal-video-frame">
-          <video id="modalVideo" controls playsinline>
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const tl = params.get('_x_tr_tl');
-      const supported = ['es', 'fr', 'it', 'en'];
-      if (tl && supported.includes(tl)) {
-        const source = document.getElementById('heroVideoSource');
-        source.src = 'assets/DMS-DataAct-Intro-' + tl + '.mp4';
-        document.getElementById('heroVideo').load();
-      }
-    })();
-
-    const videoSources = {
-      es: 'assets/DMS-DataAct-Intro-es.mp4',
-      fr: 'assets/DMS-DataAct-Intro-fr.mp4',
-      it: 'assets/DMS-DataAct-Intro-it.mp4',
-      en: 'assets/DMS-DataAct-Intro-en.mp4',
-    };
-
-    function openVideoModal(lang, label) {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('modalVideo');
-      document.getElementById('modalTitle').textContent = 'Watch in ' + label;
-      video.src = videoSources[lang];
-      video.load();
-      video.play();
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('modalVideo');
-      video.pause();
-      video.src = '';
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function handleBackdropClick(e) {
-      if (e.target === document.getElementById('videoModal')) closeVideoModal();
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeVideoModal();
-    });
-  </script>
 
   <footer class="footer">
     <div class="wrap">
